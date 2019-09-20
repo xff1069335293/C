@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(test-9-16-2.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  test-9-16.c
+g:\code\test-9-16-2\test-9-16-2\test-9-16.c(49): warning C4013: “system”未定义；假设外部返回 int
+  test-9-16-2.vcxproj -> G:\code\test-9-16-2\Debug\test.exe

@@ -1,13 +1,50 @@
 //1.完成猜数字游戏。
 //
-
+//play_game()
+//{
+//	int ret = 0;
+//	int guess = 0;
+//	ret = rand()%100+1;
+//	printf("猜数字开始,请输入0-100之间的数字：\n");
+//	while (1)
+//	{
+//		scanf("%d", &guess);
+//		if (ret == guess) 
+//		{
+//			printf("恭喜你猜对了\n");
+//		}
+//		if (ret > guess)
+//		{
+//			printf("猜小了，请重新猜:\n");
+//		}
+//		if (ret < guess)
+//		{
+//			printf("猜大了，请重新猜:\n");
+//		}
+//	}
+//	return 0;
+//}
 //#define _CRT_SECURE_NO_WARNINGS 1
 //#include<stdio.h>
 //int main() {
-//	int ch;
-//	scanf("%d", &ch);
-//	
-//
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//	do {
+//		printf("请选择功能：\n 1.进入游戏\n 0.退出游戏\n");
+//		scanf("%d", &input);
+//		switch (input)
+//		{
+//		case 1:
+//			play_game();
+//			break;
+//		case 0:
+//			printf("游戏退出");
+//			break;
+//		default:
+//			printf("输入错误");
+//			break;
+//		}
+//	} while (input);
 //	system("pause");
 //	return 0;
 //}
@@ -65,30 +102,38 @@
 //最多能输入三次密码，密码正确，提示“登录成功”, 密码错误，
 //可以重新输入，最多输入三次。三次均错，则提示退出程序。
 
-#define _CRT_SECURE_NO_WARNINGS 1
-#include<stdio.h>
-int main() {
-	int ch=0;
-	int count = 3;
-	scanf("%d", &ch);
-	int passward = "123456";
-	while (count > 0) 
-	{
-		if (passward == ch)
-		{
-			printf("登录成功：/n");
-		}
-		else
-		{
-			count--;
-			printf("登录失败，你还有%d次机会", count);
-			continue;
-		}
-	}
-
-	system("pause");
-	return 0;
-}
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	int count = 3;
+//	int i = 0;
+//	char passward[10] = { 0 };
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("请输入密码:\n");
+//		//char passward[] = "123456";
+//		scanf("%s", passward);
+//		if (strcmp(passward, "123456") == 0)
+//		{
+//			printf("登录成功：\n");
+//			break;
+//		}
+//		else
+//		{
+//			count--;
+//			printf("登录失败，你还有%d次机会\n", count);
+//		}
+//	}
+//		if (i == 3) 
+//		{
+//			printf("三次输入失败，程序自动退出\n");
+//		}
+//
+//		system("pause");
+//		return ;
+//	}
 
 
 
@@ -101,19 +146,25 @@ int main() {
 //#include<stdio.h>
 //void main() {
 //	char ch;
-//	void	getchar(ch);
-//	while (ch == EOF) {
-//		if ((ch > 0) && (ch < 9))
+//	printf("请输入任意字符：\n");
+//	while ((ch=getchar()) != EOF) 
+//	{
+//		if (ch >= 'a'&& ch <= 'z')
+//		{
+//			ch = ch - 32;
+//			printf("%c\n", ch);
+//		}
+//		else if (ch >= 'A'&&ch <= 'Z')
+//		{
+//			ch = ch + 32;
+//			printf("%c\n", ch);
+//		}
+//		else if (ch >= '0'&&ch <= '9')
 //		{
 //			;
 //		}
-//		if ((ch > 'a') && (ch < 'z')) {
-//			putchar(ch + 32);
-//		}
-//		if ((ch >= 'A') && (ch = < 'Z')) {
-//			putchar(ch - 32);
-//		}
+//		else
+//			;
 //	}
-//
 //	system("pause");
 //}

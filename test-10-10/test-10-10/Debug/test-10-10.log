@@ -1,0 +1,4 @@
+﻿  test.c
+g:\code\test-10-10\test-10-10\test.c(76): warning C4013: “scanf”未定义；假设外部返回 int
+g:\code\test-10-10\test-10-10\test.c(82): warning C4013: “printf”未定义；假设外部返回 int
+  test-10-10.vcxproj -> G:\code\test-10-10\Debug\test-10-10.exe

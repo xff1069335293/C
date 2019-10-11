@@ -1,0 +1,3 @@
+﻿  test-2.c
+g:\code\test-10-11\test-10-11\test-2.c(76): warning C4013: “pow”未定义；假设外部返回 int
+g:\windows kits\10\include\10.0.17763.0\ucrt\corecrt_math.h(482): error C2371: “pow”: 重定义；不同的基类型

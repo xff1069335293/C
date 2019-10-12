@@ -2,10 +2,11 @@
 #include "game.h"
 int main()
 {
-	
+	srand((int)time(NULL));
 	menu();
 	test();
-	game();
+	
+
 	system("pause");
 	return 0;
 }

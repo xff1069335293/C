@@ -1,3 +1,2 @@
 ﻿  game.c
-g:\code\test-10-12-2\test-10-12-2\game.c(109): warning C4047: “=”:“char”与“char [2]”的间接级别不同
   test-10-12-2.vcxproj -> G:\code\test-10-12-2\Debug\test-10-12-2.exe

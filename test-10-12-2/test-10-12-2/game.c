@@ -106,7 +106,7 @@ Computer_Move(char board[ROW][COL], int row, int col)	//电脑走
 		y = rand() % COL + 1; //产生1---ROW的数
 		if (board[x][y] == ' ')
 		{
-			board[x][y] = "#";
+			board[x][y] = '#';
 			break;
 		}
 		else
@@ -130,25 +130,24 @@ char IsWin(char board[ROW][COL], int row, int col)		//判断输赢
 			break;
 		}
 	}
-	for (i=0;i<col; i++)
+	for (i = 0; i < col; i++)
 	{
 		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != ' ')
 		{
-			return board[0][i];	
+			return board[0][i];
 			break;					//判断列相等
 		}
 
 	}
 	if (board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[0][0] != ' ')			//判断对角线
-	{  
+	{
 		return board[0][0];
 	}
-	if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] != ' ') 
+	if (board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[0][2] != ' ')
 	{
 		return board[0][2];
 	}
-	
-	for (i = 0; i < row; i++)
+	for (i = 0; i < row; i++)		//判断是否还有空位，平局的情况
 	{
 		for (j = 0; j < col; j++)
 		{
@@ -156,12 +155,12 @@ char IsWin(char board[ROW][COL], int row, int col)		//判断输赢
 			{
 				return 0;
 			}
-			
+
 		}
 	}
 	return 1;
-
 }
+
 
 
 void game()
@@ -193,6 +192,9 @@ void game()
 			printf("电脑胜利\n"); 
 			break;
 		}
-		//返回0的时候会继续下棋
+		  //返回0的时候会继续下棋
 	}
+	menu();
+	
 }
+

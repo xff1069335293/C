@@ -14,4 +14,4 @@ Tnit_Board(char board[ROW][COL], int row, int col);  //初始化数组
 Display_Board(char board[ROW][COL], int row, int col);	//展示棋盘
 Player_Move(char board[ROW][COL], int row, int col);	//玩家走
 Computer_Move(char board[ROW][COL], int row, int col);	//电脑走
-char IsWin(char board[ROW][COL], int row, int col);
+char IsWin(char board[ROW][COL], int row, int col);		//判断输赢

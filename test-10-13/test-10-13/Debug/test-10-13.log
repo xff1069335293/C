@@ -1,3 +1,0 @@
-﻿  test.c
-g:\code\test-10-13\test-10-13\test.c(8): warning C4013: “printf”未定义；假设外部返回 int
-  test-10-13.vcxproj -> G:\code\test-10-13\Debug\test-10-13.exe

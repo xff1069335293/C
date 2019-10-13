@@ -1,33 +1,44 @@
 //
 //2.编写一个函数实现n^k，使用递归实现
 
-
-int Mypow(int n, int k)
+double Pow(int n, int k)
 {
-	if (k == 0)
+	
+	if(k >= 0)
 	{
-		return 1;
-	}
-	else if (k == 1)
-	{
-		return n;
+		if (k == 0)
+		{
+			return	1;
+		}
+		if (k == 1)
+		{
+			return n;
+		}
+		return n * Pow(n, k - 1); 
 	}
 	else
 	{
-		return n * Mypow(n, k - 1);
+		return 1.0/(n * Pow(n, -k - 1));
 	}
+
+
 }
 
 
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<stdlib.h>
+int main()
 {
-	int n = 2;
-	int k = 5;
-	int c = Mypow(n, k);
-	printf("%d^%d = %d\n", n, k, c);
+	int n = 0;
+	int k = 0;
+	printf("请输入n,k的值：\n");
+	scanf("%d %d", &n, &k);
+	double ret = Pow(n,k);
+	printf("%lf", ret);
+	system("pause");
 	return 0;
+
 }
 
 

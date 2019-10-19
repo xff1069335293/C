@@ -1,0 +1,5 @@
+﻿  game.c
+game.obj : error LNK2019: 无法解析的外部符号 _open_mine，该符号在函数 _sweep_mine 中被引用
+game.obj : error LNK2001: 无法解析的外部符号 _show_mine
+game.obj : error LNK2001: 无法解析的外部符号 _real_mine
+G:\code\test-10-19\Debug\test-10-19.exe : fatal error LNK1120: 3 个无法解析的外部命令

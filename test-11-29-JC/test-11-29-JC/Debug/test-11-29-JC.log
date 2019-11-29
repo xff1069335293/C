@@ -1,0 +1,3 @@
+﻿  proseeding.c
+g:\code\test-11-29-jc\test-11-29-jc\proseeding.c(47): warning C4550: 表达式计算为缺少参数列表的函数
+  test-11-29-JC.vcxproj -> G:\code\test-11-29-JC\Debug\test-11-29-JC.exe

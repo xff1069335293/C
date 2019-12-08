@@ -1,0 +1,4 @@
+﻿  test.c
+g:\code\test-12-8\test-12-8\test.c(17): warning C4013: “system”未定义；假设外部返回 int
+g:\code\test-12-8\test-12-8\test.c(4): warning C4047: “初始化”:“int”与“char [8]”的间接级别不同
+  test-12-8.vcxproj -> G:\code\test-12-8\Debug\test-12-8.exe

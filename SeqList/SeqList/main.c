@@ -1,7 +1,7 @@
 #include"SeqList.h"
 
 int main(){
-	void TestSeqList();
+	TestSeqList();
 	system("pause");
 	return 0;
 }

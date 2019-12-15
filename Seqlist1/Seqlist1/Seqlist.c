@@ -26,7 +26,28 @@ void SeqListPrint(SeqList* ps)
 		printf("%d ", ps->a[i]);
 	}
 
-	printf("%\n");
+	printf("\n");
+}
+// 顺序表删除pos位置的值
+void SeqListErase(SeqList* ps, size_t pos)
+{
+	assert(ps && pos < ps->size);
+
+	//size_t start = pos;
+	//while (start < ps->size-1)
+	//{
+	//	ps->a[start] = ps->a[start + 1];
+	//	++start;
+	//}
+
+	size_t start = pos + 1;
+	while (start < ps->size)
+	{
+		ps->a[start - 1] = ps->a[start];
+		++start;
+	}
+
+	ps->size--;
 }
 
 void CheckCacpity(SeqList* ps)
@@ -73,20 +94,20 @@ void SeqListPopFront(SeqList* ps)
 {
 	assert(ps);
 
-	//size_t start = 0;
-	//while (start < ps->size-1)
-	//{
-	//	ps->a[start] = ps->a[start + 1];
-	//	++start;
-	//}
-	//size_t start = 1;
-	//while (start < ps->size)
-	//{
-	//	ps->a[start-1] = ps->a[start];
-	//	++start;
-	//}
+	/*size_t start = 0;
+	while (start < ps->size-1)
+	{
+		ps->a[start] = ps->a[start + 1];
+		++start;
+	}
+	size_t start = 1;
+	while (start < ps->size)
+	{
+		ps->a[start-1] = ps->a[start];
+		++start;
+	}
 
-	//--ps->size;
+	--ps->size;*/
 	SeqListErase(ps, 0);
 }
 
@@ -139,39 +160,19 @@ void SeqListInsert(SeqList* ps, size_t pos, SLDateType x)
 	ps->size++;
 }
 
-// 顺序表删除pos位置的值
-void SeqListErase(SeqList* ps, size_t pos)
-{
-	assert(ps && pos < ps->size);
-
-	//size_t start = pos;
-	//while (start < ps->size-1)
-	//{
-	//	ps->a[start] = ps->a[start + 1];
-	//	++start;
-	//}
-
-	size_t start = pos + 1;
-	while (start < ps->size)
-	{
-		ps->a[start - 1] = ps->a[start];
-		++start;
-	}
-
-	ps->size--;
-}
 
 
 
-void TestSeqList(){
+
+void TestSeqList() {
 	SeqList psl;
 	SeqListInit(&psl);
-	SeqListPushBack(&psl,1);
+	SeqListPushBack(&psl, 1);
 	SeqListPushBack(&psl, 2);
 	SeqListPushBack(&psl, 3);
 	SeqListPopBack(&psl);
 	SeqListPushFront(&psl, 6);
 	//SeqListDestory(&psl);
-	 SeqListPrint(&psl);
+	SeqListPrint(&psl);
 
 }

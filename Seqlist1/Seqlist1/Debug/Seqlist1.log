@@ -1,0 +1,5 @@
+﻿  Seqlist.c
+  test.c
+g:\code\seqlist1\seqlist1\test.c(4): warning C4013: “TestSeqList”未定义；假设外部返回 int
+  正在生成代码...
+  Seqlist1.vcxproj -> G:\code\Seqlist1\Debug\Seqlist1.exe

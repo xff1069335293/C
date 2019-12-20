@@ -1,0 +1,4 @@
+﻿  test.c
+g:\code\test-12-20-lk\test-12-20-lk\test.c(67): warning C4101: “p”: 未引用的局部变量
+g:\code\test-12-20-lk\test-12-20-lk\test.c(111): warning C4101: “ch”: 未引用的局部变量
+  test-12-20-lk.vcxproj -> G:\code\test-12-20-lk\Debug\test-12-20-lk.exe

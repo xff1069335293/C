@@ -1,1 +1,21 @@
-﻿  banker.vcxproj -> G:\code\banker\Debug\banker.exe
+﻿  banker.c
+g:\code\banker\banker\banker.c(29): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(32): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(39): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(46): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(58): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(66): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(84): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(88): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(94): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(97): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(107): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(131): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(206): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(210): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(214): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(218): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(222): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(226): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\banker\banker\banker.c(231): warning C4018: “<”: 有符号/无符号不匹配
+  banker.vcxproj -> G:\code\banker\Debug\banker.exe

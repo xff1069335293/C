@@ -27,4 +27,4 @@ void Print();//
 void Display(Node* psl, Bdatetype size, Bdatetype resource);
 void Nodepush(Node* psl, Bdatetype size, Bdatetype resource);
 void request(Node* psl, Bdatetype size, Bdatetype resource, Bdatetype input);
-void safetytest(Node* psl, Bdatetype size, Bdatetype resource, Bdatetype input);
+int safetytest(Node psl, Bdatetype size, Bdatetype resource);

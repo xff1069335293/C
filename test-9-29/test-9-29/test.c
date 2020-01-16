@@ -1,12 +1,15 @@
-//
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
 //1.在屏幕上输出以下图案：
 //* 1
-//***
-//*****
-//*******
-//*********
-//***********
-//*************
+//***3
+//*****5
+//*******7
+//*********9
+//***********11
+//*************13
 //***********
 //*********
 //*******
@@ -14,19 +17,22 @@
 //***
 //*
 //
-//#define _CRT_SECURE_NO_WARNINGS 1
-//#include<stdio.h>
-//#include<stdlib.h>
+
+
 //int main() {
 //	int i ,j= 0;
-//	for (i = 1; i <=13; i=i+2) {
-//		for (j = 1; j <= i; j++) {
+//	for (i = 1; i <=13; i=i+2) 
+//	{
+//		for (j = 1; j <= i; j++) 
+//		{
 //			printf("*");
 //		}
 //		printf("\n");
 //	}
-//	for (i = 11; i >= 1; i = i - 2) {
-//		for (j = 1; j <= i; j++) {
+//	for (i = 11; i >= 1; i = i - 2) 
+//	{
+//		for (j = 1; j <= i; j++) 
+//		{
 //			printf("*");
 //		}
 //		printf("\n");
@@ -35,39 +41,39 @@
 //		return 0;
 //}
 //
-//升级版
-//#define _CRT_SECURE_NO_WARNINGS 1
-//#include<stdio.h>
-//#include<stdlib.h>
-//int main() {
+//实现任意行菱形打印
+
+//int main(){
 //	int line = 0;
 //	printf("请输入菱形行数：");
 //	scanf("%d", &line);
-//	int i = 0;
-//	for (i = 0; i < line; i++) {
+//	for (int i = 0; i < line; i++) //上半部分打印
+//	{
 //		int j = 0;
-//		for (j = 0; j < line - 1 - i; j++) {
+//		for (j = 0; j < line - 1 - i; j++) 
+//		{
 //			printf(" ");
 //		}
-//		int k = 0;
-//		for (k = 0; k< 2*i+1; k++) {
+//		for (int k = 0; k< 2*i+1; k++) 
+//		{
 //			printf("*");
 //		}
 //		printf("\n");
 //	}
-//	for (i = 0; i < line - 1; i++) {
-//		int j = 0;
-//		for (j = 0; j <i+1 ; j++) {
+//	for (int i = 0; i < line - 1; i++) //下半部分打印
+//	{
+//		for (int j = 0; j <i+1 ; j++) 
+//		{
 //			printf(" ");
 //		}
-//		int k = 0;
-//		for (k = 0; k <2*(line-i)-3 ; k++) {
+//		for (int k = 0; k <2*(line-i)-3 ; k++) 
+//		{
 //			printf("*");
 //		}
 //		printf("\n");
 //	}
 //	system("pause");
-//		return 0;
+//	return 0;
 //}
 //
 //2.求出0～999之间的所有“水仙花数”并输出。
@@ -82,37 +88,27 @@
 //407 = 4^3 + 0^3 + 7^3。
 //
 //
-//#define _CRT_SECURE_NO_WARNINGS 1
-//#include<stdio.h>
-//#include<stdlib.h>
-//#include<math.h>
-//int main() {
-//	int i = 0;
+//int main() 
+//{
 //	int a, b, c = 0;
-//	
-//	for (i = 100; i <= 999; i++) {
-//		a = i / 100;
-//		b = (i/10)%10;
+//	for (int i = 0; i < 999; i++)
+//	{
 //		c = i % 10;
-//		double sum =0;
-//		sum =pow(a, 3) + pow(b, 3) +pow(c, 3);
-//		if (i == sum)
+//		b = (i / 10) % 10;
+//		a = i / 100;
+//		if (i == pow(a,3)+pow(b,3)+pow(c,3))
 //		{
-//			printf("%d\n", i);
+//			printf("%d ", i);
 //		}
 //	}
-//		system("pause");
-//		return 0;}
-//
-//
+//	system("pause");
+//	return 0;
+//}
+
 //3.
 //求Sn = a + aa + aaa + aaaa + aaaaa的前5项之和，其中a是一个数字，
 //例如：2 + 22 + 222 + 2222 + 22222 
-//
-//#define _CRT_SECURE_NO_WARNINGS 1
-//#include<stdio.h>
-//#include<stdlib.h>
-//#include<math.h>
+
 //int main(){
 //	int ch = 0;
 //	int a = 0;

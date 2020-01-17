@@ -1,3 +1,2 @@
 ﻿  test.c
-g:\code\test-10-08\test-10-08\test.c(85): warning C4013: “system”未定义；假设外部返回 int
   test-10-08.vcxproj -> G:\code\test-10-08\Debug\test-10-08.exe

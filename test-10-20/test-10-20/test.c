@@ -74,7 +74,22 @@
 
 //2.获取一个数二进制序列中所有的偶数位和奇数位，
 //分别输出二进制序列。
-//
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d",&num);
+//	for (int i = 0; i<32; i+=2)
+//	{
+//		printf("%d",((num>>i)&1));
+//	}
+//	printf("\n");
+//	for (int i = 1; i<=31; i+=2)
+//	{
+//		printf("%d", ((num>>i)&1));
+//	}
+//	system("pause");
+//	return 0;
+//}
 //3. 输出一个整数的每一位。
 //
 //int main()
@@ -94,11 +109,21 @@
 //输入例子 :
 //1999 2299
 //输出例子 : 7
-//
-//
-//int main()
-//{
-//	int b = -20;
-//	system("pause");
-//	return 0;
-//}
+
+
+int main()
+{
+	int count = 0;
+	int a = 1999;
+	int b = 2299;
+	for (int i = 0; i < 32; i++)
+	{
+		if (((a >> i) & 1) ^ ((b >> i) & 1) == 1)
+		{
+			++count;
+		}
+	}
+	printf("%d",count);
+	system("pause");
+	return 0;
+}

@@ -1,47 +1,99 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+ï»¿#define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 
-//1
-//Ğ´Ò»¸öº¯Êı·µ»Ø²ÎÊı¶ş½øÖÆÖĞ 1 µÄ¸öÊı
-//±ÈÈç£º 15 0000 1111 4 ¸ö 1  10  1010 
-//³ÌĞòÔ­ĞÍ£º
-//int count_one_bits(unsigned int value)
+//int main()
 //{
-//	// ·µ»Ø 1µÄÎ»Êı 
+//	int num1 = 1;
+//	int num2 = 2;
+//	printf("%d %d %d ",num1 & num2, num1 | num2, num1^num2);//æ“ä½œç¬¦ä¸ æˆ– æŠ‘æˆ–
+//	printf("%d ",num1>>1);  //å·¦ç§»1ä½ âœ–2 å³ç§»â—2
+//	printf("%d %d\n",num1,num2);//åˆ›å»ºå˜é‡çš„äº¤æ¢
+//	num1 = num1 ^ num2; //3
+//	num2 = num1 ^ num2;//1
+//	num1 = num1 ^ num2;//2
+//	printf("%d %d\n", num1, num2);
+//	system("pause");
+//	return 0;
 //}
-int count_bits(unsigned int input) 
-{	 
-	int count = 0;
-	int num = 0;
-	while (input)
-	{
-		++count;
-		input = (input - 1)&input;
-	}
-	return count;
-}
 
 
-int main()
-{
-	int input = 0;
-	scanf("%d", &input);
-	int ret = count_bits(input);
-	printf("%d",ret);
-	system("pause");
-	return 0;
-}
+//å†™ä¸€ä¸ªå‡½æ•°è¿”å›å‚æ•°äºŒè¿›åˆ¶ä¸­ 1 çš„ä¸ªæ•°
+//æ¯”å¦‚ï¼š 15 0000 1111 4 ä¸ª 1  10  1010 
+//ç¨‹åºåŸå‹ï¼š
+//int count_one_bits(int value)
+//{
+//	// è¿”å› 1çš„ä½æ•° 
+//}
+//int count_bits1(unsigned int input)//æ±‚è´Ÿæ•°åº”è¯¥å°†æ•°è½¬åŒ–ä¸ºæ— ç¬¦å·æ•´å‹
+//{
+//	int count = 0;
+//	while (input)
+//	{
+//		if (input%2 == 1)
+//		{
+//			count++;
+//		}
+//		input = input / 2;
+//	}
+//	return count;
+//}
 //
-//2.»ñÈ¡Ò»¸öÊı¶ş½øÖÆĞòÁĞÖĞËùÓĞµÄÅ¼ÊıÎ»ºÍÆæÊıÎ»£¬
-//·Ö±ğÊä³ö¶ş½øÖÆĞòÁĞ¡£
+//int count_bits2(int input)
+//{
+//	int count = 0;
+//	for (int i = 0; i < 32; i++)
+//	{	
+//		if ((input >> i) & 1 == 1)//å…ˆå³ç§»åœ¨å’Œ1ä¸ï¼Œå°†æœ€åä¸€ä½çš„1å–å‡ºæ¥è®¡æ•°ï¼Œå¾ªç¯32æ¬¡å°†è´Ÿæ•°ä¹Ÿèƒ½å–å‡º
+//		{
+//			count++;
+//		}
+//	}
+//	return count;
+//}
 //
-//3. Êä³öÒ»¸öÕûÊıµÄÃ¿Ò»Î»¡£
+//int count_bits3(int input) 
+//{	 
+//	int count = 0;
+//	while (input)
+//	{
+//		++count;
+//		input = (input - 1)&input;//ä»å³å‘å·¦ä¾æ¬¡å°†1å–å‡ºï¼Œç›´åˆ°å€¼ä¸ºé›¶ã€‚
+//	}
+//	return count;
+//}
 //
-//4.±à³ÌÊµÏÖ£º
-//Á½¸öint£¨32Î»£©ÕûÊımºÍnµÄ¶ş½øÖÆ±í´ïÖĞ£¬ÓĞ¶àÉÙ¸öÎ»(bit)²»Í¬£¿
-//ÊäÈëÀı×Ó :
+//
+//int main()
+//{ 
+//	int input = 0;
+//	scanf("%d", &input);
+//	printf("%d %d %d\n", count_bits1(input),count_bits2(input),count_bits3(input));
+//	system("pause");
+//	return 0;
+//}
+
+//2.è·å–ä¸€ä¸ªæ•°äºŒè¿›åˆ¶åºåˆ—ä¸­æ‰€æœ‰çš„å¶æ•°ä½å’Œå¥‡æ•°ä½ï¼Œ
+//åˆ†åˆ«è¾“å‡ºäºŒè¿›åˆ¶åºåˆ—ã€‚
+//
+//3. è¾“å‡ºä¸€ä¸ªæ•´æ•°çš„æ¯ä¸€ä½ã€‚
+//
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d",&num);
+//	while (num)
+//	{
+//		printf("%d ",num%10);
+//		num = num / 10;
+//	}
+//	system("pause");
+//	return 0;
+//}
+//4.ç¼–ç¨‹å®ç°ï¼š
+//ä¸¤ä¸ªintï¼ˆ32ä½ï¼‰æ•´æ•°må’Œnçš„äºŒè¿›åˆ¶è¡¨è¾¾ä¸­ï¼Œæœ‰å¤šå°‘ä¸ªä½(bit)ä¸åŒï¼Ÿ
+//è¾“å…¥ä¾‹å­ :
 //1999 2299
-//Êä³öÀı×Ó : 7
+//è¾“å‡ºä¾‹å­ : 7
 //
 //
 //int main()

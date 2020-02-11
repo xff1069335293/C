@@ -1,6 +1,4 @@
 ﻿  test.c
-g:\code\test-11-06\test-11-06\test.c(13): warning C4013: “strrchr”未定义；假设外部返回 int
-g:\code\test-11-06\test-11-06\test.c(13): warning C4047: “=”:“char *”与“int”的间接级别不同
-g:\code\test-11-06\test-11-06\test.c(15): warning C4013: “strcat”未定义；假设外部返回 int
-g:\code\test-11-06\test-11-06\test.c(21): warning C4013: “strcpy”未定义；假设外部返回 int
+g:\code\test-11-06\test-11-06\test.c(131): warning C4033: “Reverse3”必须返回值
+g:\code\test-11-06\test-11-06\test.c(100): warning C4716: “Reverse2”: 必须返回一个值
   test-11-06.vcxproj -> G:\code\test-11-06\Debug\test-11-06.exe

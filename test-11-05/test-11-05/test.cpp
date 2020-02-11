@@ -1,30 +1,51 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+//1.调整数组使奇数全部都位于偶数前面。 
+#define _CRT_SECURE_NO_WARNINGS 1 
 #include<stdio.h>
 #include<stdlib.h>
+void Adjust(int* arr,int len)
+{
+	int* src = NULL;
+	int* end = arr + len;
+	while ( arr<= end)
+	{
+		while (*arr % 2 != 0 && arr <= end)
+		{
+			++arr;
+		}
+		src = arr;
+		while (*arr % 2 == 0 && arr <= end)
+		{
+			++arr;
+		}
+		
+		if (arr > end)
+		{
+			return ;
+		}
+		int tmp = *src;
+		*src = *arr;
+		*arr = tmp;
+		arr = src;
+		++arr;
+	}
+}
+
+void Print(int* arr, int len)
+{
+	for (int i = 0; i <= len; i++)
+	{
+		printf("%d ",arr[i]);
+	}
+	printf("\n");
+}
+
 int main()
 {
-	int buf[10] = { 0 };//把数组全部初始化为0
-	int i = 0;
-	int len = 9;//数组的下标
-	for (i = 0; i < 10; ++i)	//循环输入数组
-	{
-		scanf("%d", &buf[i]);
-	}
-	for (i = 0; i <= len; ++i) 
-	{
-		if (buf[i] % 2 == 0) 
-		{
-			int tmp = buf[len];
-			buf[len] = buf[i];
-			buf[i] = tmp;//交换数组
-			len = len - 1;//即控制循环跳出条件,又控制数组下边往前移动一.
-			i = i - 1;//因为不知道交换的元素是否为偶数,所以把这次循环再进行一次
-		}
-	}
-	for (i = 0; i < 10; ++i) 
-	{
-		printf("%d ", buf[i]);
-	}
+	int arr[] = { 1,4,2,5,6,7,9,2 };
+	int len = sizeof(arr) / sizeof(arr[0])-1;
+	Print(arr, len);
+	Adjust(arr,len);
+	Print(arr,len);
 	system("pause");
 	return 0;
 }

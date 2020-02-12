@@ -1,0 +1,8 @@
+﻿  test.c
+g:\code\test-11-09\test-11-09\test.c(82): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+g:\code\test-11-09\test-11-09\test.c(82): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“int *”
+g:\code\test-11-09\test-11-09\test.c(82): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 3 拥有了类型“int (*)[3]”
+g:\code\test-11-09\test-11-09\test.c(75): warning C4047: “初始化”:“int *”与“int (*)[3]”的间接级别不同
+g:\code\test-11-09\test-11-09\test.c(76): warning C4047: “初始化”:“int *”与“int (*)[3]”的间接级别不同
+g:\code\test-11-09\test-11-09\test.c(77): warning C4047: “初始化”:“int *”与“int (*)[3][3]”的间接级别不同
+  test-11-09.vcxproj -> G:\code\test-11-09\Debug\test-11-09.exe

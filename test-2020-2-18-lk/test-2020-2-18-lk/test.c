@@ -17,7 +17,7 @@
 //	输出 : true
 //
 	
-void sort(int *nums, int low, int high)
+void sort1(int *nums, int low, int high)
 {
 	if (low >= high)   return;
 	int i = low, j = high;
@@ -41,5 +41,51 @@ bool containsDuplicate(int* nums, int numsSize)
 	for (int i = 0; i < numsSize - 1; ++i)
 		if (nums[i] == nums[i + 1])
 			return true;
+	return false;
+}
+
+
+void sort2(int* nums, int numsSize)
+{
+
+	for (int i = 0; i < numsSize; i++)
+	{
+		int flag = 0;
+		for (int j = 1; j <= numsSize - i - 1; j++)
+		{
+			if (nums[j - 1] > nums[j])
+			{
+				flag = 1;
+				int tmp = nums[j - 1];
+				nums[j - 1] = nums[j];
+				nums[j] = tmp;
+			}
+		}
+		if (flag == 0)
+		{
+			break;
+		}
+	}
+}
+
+bool containsDuplicate(int* nums, int numsSize)
+{
+
+	int src = 0;
+	int dst = src + 1;
+	if (numsSize <= 1)
+	{
+		return false;
+	}
+	sort(nums, numsSize);
+	while (src < numsSize - 1)
+	{
+		if (nums[src] == nums[dst])
+		{
+			return true;
+		}
+		src = dst;
+		++dst;
+	}
 	return false;
 }

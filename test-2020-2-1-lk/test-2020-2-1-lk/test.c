@@ -53,3 +53,37 @@ bool isLongPressedName(char* name, char* typed)
 	}
 	return !name[i];
 }
+
+bool isLongPressedName(char* name, char* typed)
+{
+	// int arr[26] = {0};   //错误解法，本题要保证顺序正确
+	// while (*typed != '\0')
+	// {
+	//     arr[*typed - 'a']++;
+	//     typed++;
+	// }
+
+	// while (*name != '\0')
+	// {
+	//     arr[*(name) - 'a']--;
+	//     if (arr[*(name) - 'a'] <0)
+	//     {
+	//         return false;
+	//     }
+	//     name++;
+	// }
+	// return true;
+	while (*name != '\0' && *typed != '\0')
+	{
+		if (*name == *typed)
+		{
+			++name;
+		}
+		++typed;
+	}
+	if (*name == '\0')
+	{
+		return true;
+	}
+	return false;
+}

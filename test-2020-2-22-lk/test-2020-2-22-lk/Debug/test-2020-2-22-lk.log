@@ -1,0 +1,8 @@
+﻿  test.c
+g:\code\test-2020-2-22-lk\test-2020-2-22-lk\test.c(16): warning C4013: “strlen”未定义；假设外部返回 int
+g:\code\test-2020-2-22-lk\test-2020-2-22-lk\test.c(20): warning C4013: “malloc”未定义；假设外部返回 int
+g:\code\test-2020-2-22-lk\test-2020-2-22-lk\test.c(73): warning C4133: “return”: 从“int *”到“char *”的类型不兼容
+g:\code\test-2020-2-22-lk\test-2020-2-22-lk\test.c(79): warning C4133: “函数”: 从“int [2]”到“char *”的类型不兼容
+g:\code\test-2020-2-22-lk\test-2020-2-22-lk\test.c(79): warning C4133: “函数”: 从“int [1]”到“char *”的类型不兼容
+g:\code\test-2020-2-22-lk\test-2020-2-22-lk\test.c(80): warning C4013: “system”未定义；假设外部返回 int
+  test-2020-2-22-lk.vcxproj -> G:\code\test-2020-2-22-lk\Debug\test-2020-2-22-lk.exe

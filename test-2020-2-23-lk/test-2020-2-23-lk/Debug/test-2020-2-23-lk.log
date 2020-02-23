@@ -1,0 +1,17 @@
+﻿  test.c
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(78): warning C4244: “+=”: 从“double”转换到“long”，可能丢失数据
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(88): warning C4244: “+=”: 从“double”转换到“long”，可能丢失数据
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(93): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(111): warning C4013: “system”未定义；假设外部返回 int
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(117): error C2084: 函数“int myAtoi(char *)”已有主体
+  g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(51): note: 参见“myAtoi”的前一个定义
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(120): error C2065: “bool”: 未声明的标识符
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(120): error C2146: 语法错误: 缺少“;”(在标识符“flag”的前面)
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(120): error C2065: “flag”: 未声明的标识符
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(120): error C2065: “true”: 未声明的标识符
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(128): error C2065: “flag”: 未声明的标识符
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(128): error C2065: “true”: 未声明的标识符
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(133): error C2065: “flag”: 未声明的标识符
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(133): error C2065: “false”: 未声明的标识符
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(146): error C2065: “flag”: 未声明的标识符
+g:\code\test-2020-2-23-lk\test-2020-2-23-lk\test.c(148): error C2065: “flag”: 未声明的标识符

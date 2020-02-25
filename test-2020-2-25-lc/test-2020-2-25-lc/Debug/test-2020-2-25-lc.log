@@ -1,0 +1,4 @@
+﻿  test.c
+g:\code\test-2020-2-25-lc\test-2020-2-25-lc\test.c(56): warning C4018: “<”: 有符号/无符号不匹配
+g:\code\test-2020-2-25-lc\test-2020-2-25-lc\test.c(61): warning C4013: “system”未定义；假设外部返回 int
+  test-2020-2-25-lc.vcxproj -> G:\code\test-2020-2-25-lc\Debug\test-2020-2-25-lc.exe

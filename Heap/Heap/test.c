@@ -1,7 +1,8 @@
 #include"heap.h"
 int main()
 {
-	test();
+	TestHeap();
+	//TestTopk();
 	system("pause");
 	return 0;
 }

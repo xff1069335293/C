@@ -1,10 +1,14 @@
+#pragma once
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<stdlib.h>
 #include<malloc.h>
 #include<assert.h>
 #include<string.h>
-#pragma once
+#include<time.h>
+#define N  100000 
+#define K   10
+
 
 typedef int HPDataType;
 typedef struct Heap
@@ -25,8 +29,8 @@ void HeapPop(Heap* hp);
 // 取堆顶的数据
 HPDataType HeapTop(Heap* hp);
 // 堆的数据个数
-void HeapSize(Heap* hp);
+int HeapSize(Heap* hp);
 // 堆的判空
-void  HeapEmpty(Heap* hp);
+int  HeapEmpty(Heap* hp);
 // 对数组进行堆排序
-void HeapSort(Heap* hp, int n);
+void HeapSort(int* a, int n);

@@ -12,28 +12,15 @@ ListNode* ListCreate()
 void ListDestory(ListNode* phead)
 {
 	assert(phead);
-	ListNode* cur = phead;
-	if (cur == cur->_next)
-	{
-		free(cur);
-		cur = NULL;
-		//cur->_next = cur->_prev = NULL;
-		return ;
-	}
-	if (cur->_next == cur->_prev)
+	ListNode* cur = phead->_next;
+	while (cur != phead)
 	{
 		ListNode* next = cur->_next;
 		free(cur);
-		free(next);
+		cur = next;
 	}
-	while (cur->_next != phead)
-	{
-		ListNode* next= cur->_next;
-		free(cur);
-		cur = next; 
-	}
-	free(cur->_next);
-	free(cur);
+	free(phead);
+	phead = NULL;//这个地方其实没用，因为返回的指针指向的空间虽然被free掉了，但是它的指向并没有改变，我们置空的只是临时变量指针的指向。
 }
 
 // 双向链表打印
@@ -62,16 +49,19 @@ void ListPushBack(ListNode* phead, LTDataType x)
 }
 // 双向链表尾删
 void ListPopBack(ListNode* phead)
-{
-	ListNode* prev = phead->_prev;
-	ListNode* next = phead->_next;
-	free(phead);
-	prev->_next = next;
-	next->_prev = prev;
+{	//只有头
+	assert(phead != phead->_next &&phead);
+	ListNode* tail = phead->_prev;
+	ListNode* prev = tail->_prev;
+	free(tail);
+	prev->_next = phead;
+	phead->_prev = prev;
 }
+
 // 双向链表头插
 void ListPushFront(ListNode* phead, LTDataType x)
-{
+{	//只有头的情况
+	assert(phead);
 	ListNode* cur = (ListNode*)malloc(sizeof(ListNode));
 	cur->_data = x;
 	ListNode* next = phead->_next;
@@ -80,66 +70,31 @@ void ListPushFront(ListNode* phead, LTDataType x)
 	cur->_prev = phead;
 	cur->_next = next;
 }
+
 // 双向链表头删
 void ListPopFront(ListNode* phead)
-{
-	//只有头
-	//单链表
-	//多链表
-	assert(phead);
-	if (phead->_prev == phead)
-	{
-		return;
-	}
-	if (phead->_next == phead->_prev)
-	{
-		ListNode *next = phead->_next;
-		free(next);
-		next = phead;
-	}
-	else
-	{
-		ListNode *next = phead->_next->_next;
-		free(phead->_next);
-		phead->_next = next;
-		next->_prev = phead;
-	}
+{	//不能删除头结点
+	assert(phead && phead->_next != phead);
+	ListNode* next = phead->_next->_next;
+	free(phead->_next);
+	next->_prev = phead;
+	phead->_next = next;
 }
 
 // 双向链表查找
 ListNode* ListFind(ListNode* phead, LTDataType x)
-{	//只有头
-	//单链表
-	//多链表
-	ListNode* cur = phead;
-	if (cur->_next == cur)
+{
+	assert(phead);
+	ListNode* cur = phead->_next;
+	while (cur != phead)
 	{
-		return NULL;
-	}
-	if (cur->_prev == cur->_next)
-	{
-		if (cur->_next->_data == x)
+		if (cur->_data == x)
 		{
-			return cur->_next;
+			return cur;
 		}
-		else
-		{
-			return NULL;
-		}
+		cur = cur->_next;
 	}
-	else
-	{
-		while (cur->_prev != cur->_next)
-		{
-			ListNode* next = cur->_next;
-			if (next->_data == x)
-			{
-				return next;
-			}
-			cur = next;
-		}
-		return NULL;
-	}
+	return NULL;
 }
 
 // 双向链表在pos的前面进行插入
@@ -189,4 +144,5 @@ void test()
 	ListPrint(ls);
 	ListErase(ret);
 	ListPrint(ls);
+	ListDestory(ls);
 }

@@ -114,12 +114,89 @@ void _QuickSort3(int begin, int end, int * arr)
 	_QuickSort3(prev + 1, end, arr);
 }
 
-void QuickSort(int* arr, int n)
+void QuickSort1(int* arr, int n)
 {
 	
 	//_QuickSort1(0, n - 1, arr);	//hoare法
 	//_QuickSort2(0, n - 1, arr);	//挖坑法
 	//_QuickSort3(0, n - 1, arr);	//指针法
+}
+
+
+
+int Mid(int begin, int end,int* arr)
+ {
+	int mid = (begin + end) >> 1;
+	if (arr[begin] > arr[end])
+	{
+		if (arr[end] > arr[mid])
+		{
+			return end;
+		}
+		else
+		{
+			if (arr[begin] > arr[mid])
+			{
+				return mid;
+			}
+			else
+			{
+				return begin;
+			}
+		}
+	}
+	else
+	{
+		if (arr[mid] > arr[end])
+		{
+			return end;
+		}
+		else
+		{
+			if (arr[mid] > arr[begin])
+			{
+				return mid;
+			}
+			else
+			{
+				return begin;
+			}
+		}
+	}
+	
+}
+
+//指针法
+int _QuickSort4(int begin, int end, int * arr)
+{
+	
+	int keyindex = Mid(begin, end, arr);
+ 	Swap(&arr[keyindex], &arr[end]);
+	int key = arr[end];
+	int	cur = begin;
+	int prev = cur - 1;
+	while (cur < end)
+	{
+		if (arr[cur] < key && ++prev != cur)
+		{
+			Swap(&arr[cur], &arr[prev]);
+		}
+		++cur;
+	}
+	++prev;
+	Swap(&arr[end], &arr[prev]);
+	return prev;
+}
+
+void QuickSort(int begin,int end,int* arr)		//优化
+{
+	if (begin >= end)
+	{
+		return;
+	}
+	int keyindex = _QuickSort4(begin, end, arr);//三数取中法，选择三数的中间数值
+	QuickSort(begin, keyindex - 1, arr);
+	QuickSort(keyindex + 1, end, arr);
 }
 	
 void Print(int* arr, int n)
@@ -132,9 +209,9 @@ void Print(int* arr, int n)
 }
 int main()
 {
-	int arr[] = {6,1,2,7,9,3,10,5,4,8,8};
+	int arr[] = {9,8,7,6,5,4,3,2,1,0,8};
 	int n = sizeof(arr) / sizeof(arr[0]);
-	QuickSort(arr,n);
+	QuickSort( 0, n - 1,arr);
 	Print(arr, n);
 	system("pause");
 	return 0;

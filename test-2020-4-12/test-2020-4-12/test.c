@@ -11,12 +11,8 @@
 //	ÊäÈë : n = 9
 //	Êä³ö : 45
 
-	int sumNums(int n) {
-	if (n == 0)
-	{
-		return 0;
-	}
-	int sum = n;
-	sum += sumNums(n - 1);
-	return sum;
+int sumNums(int n) {
+
+	n && (n += sumNums(n - 1));
+	return n;
 }

@@ -1,0 +1,10 @@
+﻿  test.cpp
+g:\code\test415\test415\test.cpp(10): error C2065: “n”: 未声明的标识符
+g:\code\test415\test415\test.cpp(12): error C2065: “n”: 未声明的标识符
+g:\code\test415\test415\test.cpp(43): error C2664: “Stack::Stack(const Stack &)”: 无法将参数 1 从“int”转换为“const Stack &”
+  g:\code\test415\test415\test.cpp(43): note: 原因如下: 无法从“int”转换为“const Stack”
+  g:\code\test415\test415\test.cpp(43): note: 无构造函数可以接受源类型，或构造函数重载决策不明确
+g:\code\test415\test415\test.cpp(47): error C2664: “Stack::Stack(const Stack &)”: 无法将参数 1 从“int”转换为“const Stack &”
+  g:\code\test415\test415\test.cpp(47): note: 原因如下: 无法从“int”转换为“const Stack”
+  g:\code\test415\test415\test.cpp(47): note: 无构造函数可以接受源类型，或构造函数重载决策不明确
+g:\code\test415\test415\test.cpp(50): error C3867: “Stack::Display”: 非标准语法；请使用 "&" 来创建指向成员的指针

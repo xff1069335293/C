@@ -1,0 +1,7 @@
+﻿  test.cpp
+g:\code\test704\test704\test.cpp(122): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“size_t”
+  g:\code\test704\test704\test.cpp(122): note: 请考虑在格式字符串中使用“%zd”
+g:\code\test704\test704\test.cpp(127): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“size_t”
+  g:\code\test704\test704\test.cpp(127): note: 请考虑在格式字符串中使用“%zd”
+g:\code\test704\test704\test.cpp(203): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  test704.vcxproj -> G:\code\test704\x64\Debug\test704.exe
